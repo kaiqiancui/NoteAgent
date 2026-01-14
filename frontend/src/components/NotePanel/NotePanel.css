@@ -1,0 +1,187 @@
+.note-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.notes-list-section {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  min-height: 0;
+}
+
+.quick-mark-section {
+  flex-shrink: 0;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.quick-mark-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.note-item {
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 12px !important;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.note-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.note-item.highlighted {
+  animation: highlight-pulse 2s ease-out;
+  box-shadow: 0 4px 16px rgba(24, 144, 255, 0.3);
+}
+
+@keyframes highlight-pulse {
+  0% {
+    background-color: #e6f7ff;
+    transform: scale(1);
+  }
+  50% {
+    background-color: #bae7ff;
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
+
+.note-content {
+  width: 100%;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.note-frame {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.note-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.note-timestamp {
+  font-family: monospace;
+  color: #1890ff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.note-timestamp:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+.note-display {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  min-height: 40px;
+}
+
+.note-display:hover {
+  background-color: #fafafa;
+}
+
+.note-display p {
+  margin: 0;
+}
+
+.empty-note {
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+.note-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Markdown 样式 */
+.note-display h1,
+.note-display h2,
+.note-display h3 {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.note-display h1 {
+  font-size: 18px;
+}
+
+.note-display h2 {
+  font-size: 16px;
+}
+
+.note-display h3 {
+  font-size: 14px;
+}
+
+.note-display code {
+  background: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.note-display pre {
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.note-display pre code {
+  background: none;
+  padding: 0;
+}
+
+.note-display ul,
+.note-display ol {
+  margin: 4px 0;
+  padding-left: 20px;
+}
+
+.note-display li {
+  margin: 2px 0;
+}

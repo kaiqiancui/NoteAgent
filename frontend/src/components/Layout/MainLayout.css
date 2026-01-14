@@ -1,0 +1,59 @@
+.main-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #f0f2f5;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.left-panel {
+  width: 65%;
+  height: 100%;
+  background: #000;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.right-panel {
+  width: 35%;
+  height: 100%;
+  background: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+  border-left: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.right-panel .ant-tabs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel .ant-tabs-nav {
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+
+.right-panel .ant-tabs-content-holder {
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.right-panel .ant-tabs-content {
+  height: 100%;
+}
+
+.right-panel .ant-tabs-tabpane {
+  height: 100%;
+  overflow: hidden;
+}
